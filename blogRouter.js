@@ -31,9 +31,6 @@ router.delete('/:id', (req, res)=>{
     
 });
 
-
-
-
 router.put('/:id', jsonParser, (req,res)=>{
     const requiredFields = ['title', 'content', 'author', 'publishDate'];
     for(let i=0; i<requiredFields.length;i++){
@@ -62,12 +59,5 @@ router.put('/:id', jsonParser, (req,res)=>{
     res.status(204).end();
 
 });
-
-
-
-
-
-
-
 
 module.exports = router;
